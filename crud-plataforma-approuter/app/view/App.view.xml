@@ -1,0 +1,11 @@
+<mvc:View xmlns:layout="sap.ui.layout" xmlns:smartmultiedit="sap.ui.comp.smartmultiedit" 
+xmlns:f="sap.f" 
+controllerName="desafio.l4e.app.controller.App" 
+xmlns:mvc="sap.ui.core.mvc" 
+displayBlock="true" 
+xmlns="sap.m"
+xmlns:tnt="sap.tnt" >
+    <SplitApp id="app">
+    </SplitApp>
+    
+</mvc:View>

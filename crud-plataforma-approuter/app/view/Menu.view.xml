@@ -1,0 +1,50 @@
+<mvc:View 
+xmlns:f="sap.f" 
+controllerName="desafio.l4e.app.controller.Menu" 
+xmlns:mvc="sap.ui.core.mvc" 
+displayBlock="true" 
+xmlns="sap.m"
+xmlns:tnt="sap.tnt" >
+    <f:ShellBar
+        id="menu"
+        title="Desafio L4E"
+        secondTitle="SAPUI5" >
+        <f:menu>
+            <Menu >
+                <MenuItem text="Cadastro de Plataformas" icon="sap-icon://add-contact" press="onNavCadastroPlataformas" ></MenuItem>
+                <MenuItem text="Consulta de Plataformas" icon="sap-icon://account" press="onNavConsultaPlataformas"></MenuItem>
+            </Menu>
+        </f:menu>
+    </f:ShellBar>
+    <Page showHeader="false" >
+        <content>
+            <VBox width="100%">
+                <Image src="./images/sap.png" width="100%" height="100%"/>
+            </VBox>
+        </content>
+    </Page>
+
+
+
+    <!-- <tnt:ToolPage id="toolPage" >
+        <tnt:header>
+            <f:ShellBar 
+                id="menu"
+                title="Desafio L4E"
+                secondTitle="SAPUI5"
+                homeIcon="./images/logo_final-bco.menor_.png"
+                showMenuButton="true"
+                menuButtonPressed="onMenuButtonPress" >
+                
+            </f:ShellBar>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation expanded="true" itemSelect="onItemSelect">
+                <tnt:NavigationList >
+                    <tnt:NavigationListItem text="Cadastro de Plataformas" id="teste1" icon="sap-icon://add-contact" ></tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Consulta de Plataformas" id="teste2" icon="sap-icon://account"></tnt:NavigationListItem>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+    </tnt:ToolPage> -->
+</mvc:View>

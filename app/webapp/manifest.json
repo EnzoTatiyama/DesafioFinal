@@ -1,0 +1,182 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "desafio.l4e.app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "desafio.l4e.app.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+                "sap.ui.layout": {},
+                "sap.tnt": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "desafio.l4e.app.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "desafio.l4e.app.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+                "clearControlAggregation": false
+			},
+			"routes": [
+                {
+                    "name": "RouteApp",
+                    "pattern": "RouteApp",
+                    "target": ["TargetApp"]
+                },
+                {
+                    "pattern": "",
+                    "name": "Menu",
+                    "target": ["Menu"]
+                },
+                {
+                    "pattern": "CadastroUsuario",
+                    "name": "CadastroUsuario",
+                    "target": ["Menu", "CadastroUsuario"]
+                },
+                {
+                    "pattern": "LoginUsuario",
+                    "name": "LoginUsuario",
+                    "target": ["Menu", "LoginUsuario"]
+                },
+                {
+                    "pattern": "CadastroPlataformas",
+                    "name": "CadastroPlataformas",
+                    "target": ["Menu", "CadastroServico"]
+                },
+                {
+                    "pattern": "ConsultaPlataformas",
+                    "name": "ConsultaPlataformas",
+                    "target": ["Menu", "ConsultaPlataformas"]
+                },
+                {
+                    "pattern": "DetalheServico",
+                    "name": "DetalheServico",
+                    "target": ["Menu", "DetalheServico"]
+                }
+
+            ],
+			"targets": {
+                "Menu": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "menu",
+                    "viewName": "Menu"
+                },
+                "TargetApp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App",
+					"viewName": "App"
+                },
+                "LoginUsuario": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "loginusuario",
+                    "viewName": "LoginUsuario",
+                    "controlId": "pageContainer",
+                    "parent": "Menu"
+                },
+                "CadastroUsuario": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "cadastrousuario",
+                    "viewName": "CadastroUsuario",
+                    "controlId": "pageContainer",
+                    "parent": "Menu"
+                },
+                "CadastroPlataformas": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "cadastroplataformas",
+                    "viewName": "CadastroPlataformas",
+                    "controlId": "pageContainer",
+                    "parent": "Menu"
+                },
+                "DetalheServico": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "detalheservico",
+                    "viewName": "DetalheServico",
+                    "controlId": "pageContainer",
+                    "parent": "Menu"
+                },
+                "ConsultaPlataformas": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "consultaplataformas",
+                    "viewName": "ConsultaPlataformas",
+                    "controlId": "pageContainer",
+                    "parent": "Menu"
+                }
+			}
+		}
+	}
+}

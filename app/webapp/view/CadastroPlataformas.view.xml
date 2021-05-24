@@ -1,0 +1,93 @@
+<mvc:View xmlns:uxap="sap.uxap" xmlns:core="sap.ui.core" 
+controllerName="desafio.l4e.app.controller.CadastroPlataformas" 
+xmlns:form="sap.ui.layout.form" 
+xmlns:mvc="sap.ui.core.mvc" 
+displayBlock="true" 
+xmlns="sap.m">
+
+    <Page showHeader="false">
+        <content  >
+            <VBox width="25%" alignItems="Center">
+                <Image src="./images/logoName.png" width="100%" height="100%"  />
+            </VBox>
+
+            <form:Form >
+                <form:title>
+                    <core:Title text="Informações sobre o serviço" level="H5" ></core:Title>
+                </form:title>
+                <form:layout >
+                    <form:ColumnLayout columnsL="2" columnsM="2" columnsXL="3"  ></form:ColumnLayout>
+                </form:layout>
+                <form:formContainers >
+                    <form:FormContainer  >
+                        <form:formElements >                           
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Título" design="Bold" > </Label>
+                                </form:label>
+                                <form:fields>
+                                    <Input value="" ></Input>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Categoria do serviço" design="Bold"></Label>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox selectedKey="" showSecondaryValues="true" >
+                                        <items>
+                                            <core:Item key="Fornecedor" text="Encanador" />
+                                            <core:Item key="Prestador Serviço" text="Eletricista" />
+                                        </items>
+                                    </ComboBox>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Valor (R$)" design="Bold" > </Label>
+                                </form:label>
+                                <form:fields>
+                                    <Input value="" ></Input>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Disponibilidade" design="Bold"></Label>
+                                </form:label>
+                                <form:fields>
+                                    <Switch type="AcceptReject" change="onChangeSwitch" state="{= ${Parceiro>/status} === 'A' ? true : false}"></Switch>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Descrição do serviço" design="Bold" > </Label>
+                                </form:label>
+                                <form:fields>
+                                    <TextArea value="" growing="true" width="100%"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                </form:formContainers>
+            </form:Form>
+            
+            
+        </content>
+        <OverflowToolbar >
+            <ToolbarSpacer />
+                <Button text="Cadastrar" type="Emphasized" press="onConfirmar" width="12%" />
+            <ToolbarSpacer />
+        </OverflowToolbar>
+        <content >
+            <Image src="./images/logoL4E.png" width="100px" height="100px"  />
+        </content>
+            
+        <footer >
+            <OverflowToolbar >
+                
+            </OverflowToolbar> 
+        </footer>
+       
+    </Page>
+		
+</mvc:View>
