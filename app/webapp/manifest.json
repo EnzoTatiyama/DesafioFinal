@@ -102,7 +102,7 @@
                 {
                     "pattern": "CadastroPlataformas",
                     "name": "CadastroPlataformas",
-                    "target": ["Menu", "CadastroServico"]
+                    "target": ["Menu", "CadastroPlataformas"]
                 },
                 {
                     "pattern": "ConsultaPlataformas",
@@ -114,7 +114,6 @@
                     "name": "DetalheServico",
                     "target": ["Menu", "DetalheServico"]
                 }
-
             ],
 			"targets": {
                 "Menu": {

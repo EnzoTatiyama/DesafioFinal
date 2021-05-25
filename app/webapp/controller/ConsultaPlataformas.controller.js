@@ -13,9 +13,12 @@ sap.ui.define([
 
 		return BaseController.extend("desafio.l4e.app.controller.ConsultaPlataformas", {
 			onInit: function () {
-
+                this.getRouter().getRoute("ConsultaPlataformas").attachPatternMatched(this.handleRouteMatched, this);
             },
             
+            handleRouteMatched: async function () {
+                
+            }
         
 		});
 	});

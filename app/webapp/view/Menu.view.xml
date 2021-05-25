@@ -24,12 +24,10 @@ xmlns:tnt="sap.tnt" >
                     id="navigationList"
                     width="320px"
                     selectedKey="subItem3">
-                    <tnt:NavigationListItem text="Banco de serviços" key="rootItem1" icon="sap-icon://cloud" >
-                        <tnt:NavigationListItem text="Cadastro de Usuário" select="onNavCadastroUsuario" icon="sap-icon://add-contact"/>
-                        <tnt:NavigationListItem text="Cadastro de Serviços" select="onNavCadastroPlataformas" icon="sap-icon://add-contact" />
-                        <tnt:NavigationListItem text="Consulta de Serviços" select="onNavConsultaPlataformas" icon="sap-icon://add-contact"/>
-                        <tnt:NavigationListItem text="Detalhe de Serviços" select="onNavDetalheServico" icon="sap-icon://add-contact"/>
-                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Cadastro de Usuário" select="onNavCadastroUsuario" icon="sap-icon://add-contact"/>
+                    <tnt:NavigationListItem text="Cadastro de Serviços" select="onNavCadastroServicos" icon="sap-icon://add-activity" />
+                    <tnt:NavigationListItem text="Consulta de Serviços" select="onNavConsultaPlataformas" icon="sap-icon://activity-items"/>
+                    <tnt:NavigationListItem text="Detalhe de Serviços" select="onNavDetalheServico" icon="sap-icon://add-contact"/>
                 </tnt:NavigationList>
             </tnt:SideNavigation>
 		</tnt:sideContent>
@@ -39,5 +37,5 @@ xmlns:tnt="sap.tnt" >
 				<pages></pages>
 			</NavContainer>
 		</tnt:mainContents>
-        </tnt:ToolPage>
+    </tnt:ToolPage>
 </mvc:View>

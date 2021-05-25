@@ -25,7 +25,6 @@ sap.ui.define([
                 oToolPage.setSideExpanded(!oToolPage.getSideExpanded());
             },
 
-
             onNavConsultaPlataformas: function() {
                 this.getRouter().navTo("ConsultaPlataformas");
             },
@@ -34,7 +33,7 @@ sap.ui.define([
                 this.getRouter().navTo("CadastroUsuario");
             },
 
-            onNavCadastroPlataformas: function() {
+            onNavCadastroServicos: function() {
                 this.getRouter().navTo("LoginUsuario");
             },
 

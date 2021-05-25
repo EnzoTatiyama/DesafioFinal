@@ -85,6 +85,10 @@ html.sap-desktop .sapMIBar.sapMFooter-CTX {
     vertical-align: middle;
 }
 
+.sapTntNavLIItem .sapUiIcon {
+    color: #000000;
+}
+
 .sapMVBox {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
@@ -94,4 +98,8 @@ html.sap-desktop .sapMIBar.sapMFooter-CTX {
 
 .sapUiForm:not(.sapUiFormEdit) .sapUiFormCLSmallColumns .sapUiFormCLContainer:not(.sapUiFormContainerTitle):not(.sapUiFormContainerToolbar) {
     padding-top: 2rem;
+}
+
+.sapMFeedIn {
+    background-color: #efefef;
 }

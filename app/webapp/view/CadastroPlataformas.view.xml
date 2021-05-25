@@ -55,7 +55,7 @@ xmlns="sap.m">
                                     <Label text="Disponibilidade" design="Bold"></Label>
                                 </form:label>
                                 <form:fields>
-                                    <Switch type="AcceptReject" change="onChangeSwitch" state="{= ${Parceiro>/status} === 'A' ? true : false}"></Switch>
+                                    <Switch type="AcceptReject" change="onChangeSwitch" ></Switch>
                                 </form:fields>
                             </form:FormElement>
                             <form:FormElement >

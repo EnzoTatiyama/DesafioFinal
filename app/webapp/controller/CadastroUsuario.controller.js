@@ -21,7 +21,6 @@ sap.ui.define([
             onCadastrar: async function () {
                 var oUsuario = this.getView().getModel("Usuario").getData();
                 var that = this;
-                console.log(oUsuario);
                 
                 this.getView().setBusy(true);
                 await $.ajax("/api/register", {
