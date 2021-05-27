@@ -34,10 +34,9 @@ xmlns="sap.m">
                                     <Label text="Categoria do serviço" design="Bold"></Label>
                                 </form:label>
                                 <form:fields>
-                                    <ComboBox selectedKey="" showSecondaryValues="true" >
+                                    <ComboBox showSecondaryValues="true" >
                                         <items>
-                                            <core:Item key="Fornecedor" text="Encanador" />
-                                            <core:Item key="Prestador Serviço" text="Eletricista" />
+                                            <core:Item key="{d}" text="{tipo}" />
                                         </items>
                                     </ComboBox>
                                 </form:fields>

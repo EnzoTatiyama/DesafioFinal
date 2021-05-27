@@ -26,24 +26,21 @@ xmlns="sap.m">
                                     <Label text="Email" design="Bold" > </Label>
                                 </form:label>
                                 <form:fields>
-                                    <Input value="" ></Input>
+                                    <Input value="{Usuario>/mail}" ></Input>
                                 </form:fields>
                             </form:FormElement>
-                          
                             <form:FormElement >
                                 <form:label>
                                     <Label text="Senha" design="Bold"  > </Label>
                                 </form:label>
                                 <form:fields>
-                                    <Input value="" type="Password"></Input>
+                                    <Input value="{Usuario>/senha}" type="Password"></Input>
                                 </form:fields>
                             </form:FormElement>
-                            
                         </form:formElements>
                     </form:FormContainer>
                 </form:formContainers>
             </form:Form>
-            
             
         </content>
         <OverflowToolbar >
@@ -54,7 +51,6 @@ xmlns="sap.m">
         <content >
             <Image src="./images/logoL4E.png" width="100px" height="100px"  />
         </content>
-            
         <footer >
             <OverflowToolbar >
             </OverflowToolbar> 

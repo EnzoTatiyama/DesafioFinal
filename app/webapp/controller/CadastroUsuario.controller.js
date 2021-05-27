@@ -23,18 +23,21 @@ sap.ui.define([
                 var that = this;
                 
                 this.getView().setBusy(true);
-                await $.ajax("/api/register", {
+                await $.ajax("https://warm-beyond-86023.herokuapp.com/register", {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        "x-api-key": "75e8efc1-3858-4778-bafb-1a744b1da3b7"
                     },
                     data: JSON.stringify(oUsuario),
-                    success(){
+                    success(data){
                         MessageBox.success("Cadastrado com sucesso!");
-                        console.log(oUsuario);
                     },
-                    error(){
-                        MessageBox.error("Não foi possível cadastrar.");
+                    error(response){
+                        const errors = response.responseJSON.errors;
+                        for (let i=0; i<errors.length; i++){
+                            MessageBox.error(errors[i].message);
+                        }
                     }
                 })
                 this.getView().setBusy(false);

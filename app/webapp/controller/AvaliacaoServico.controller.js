@@ -9,14 +9,11 @@ sap.ui.define([
 	function (BaseController, JSONModel, MessageBox) {
 		"use strict";
 
-		return BaseController.extend("desafio.l4e.app.controller.DetalheServico", {
+		return BaseController.extend("desafio.l4e.app.controller.AvaliacaoServico", {
 			onInit: function () {
-                
+                this.getRouter().getRoute("LoginUsuario").attachPatternMatched(this.handleRouteMatched, this);
             },
-
-            onAvaliar: async function () {
-                this.getRouter().navTo("AvaliacaoServico");
-            }
             
+
 		});
 	});

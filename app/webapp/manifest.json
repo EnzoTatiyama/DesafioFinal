@@ -110,6 +110,11 @@
                     "target": ["Menu", "ConsultaPlataformas"]
                 },
                 {
+                    "pattern": "AvaliacaoServico",
+                    "name": "AvaliacaoServico",
+                    "target": ["Menu", "AvaliacaoServico"]
+                },
+                {
                     "pattern": "DetalheServico",
                     "name": "DetalheServico",
                     "target": ["Menu", "DetalheServico"]
@@ -163,6 +168,15 @@
                     "clearControlAggregation": false,
                     "viewId": "detalheservico",
                     "viewName": "DetalheServico",
+                    "controlId": "pageContainer",
+                    "parent": "Menu"
+                },
+                "AvaliacaoServico": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "avaliacaoservico",
+                    "viewName": "AvaliacaoServico",
                     "controlId": "pageContainer",
                     "parent": "Menu"
                 },

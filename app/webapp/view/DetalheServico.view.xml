@@ -15,16 +15,20 @@ xmlns="sap.m">
             <Title text="Nome: Enzo de Campos Tatiyama" titleStyle="H4" />
             <Title text="Telefone: (11) 976402187"  titleStyle="H4" />
             <Title text="Categoria: Encanador" titleStyle="H4" />
+            <Title text="Valor: R$2000,00" titleStyle="H4" />
         </VBox>
         
         <FlexBox justifyContent="Center" alignItems="Stretch">
             <Title text="Nota média: 5.0"  titleStyle="H2" />
             <Image src="./images/star2.png" width="26px" height="26px" />
         </FlexBox>
+
+        <VBox backgroundDesign="Translucent"  alignItems="Center">
+            <Button text="Avaliar serviço" type="Emphasized" press="onAvaliar"></Button>
+        </VBox>
         
         <Panel headerText="Comentários" backgroundDesign="Transparent"  >
             <content >
-                <FeedInput icon="./images/icon.jpg" />
                 <List showSeparators="All">
                     <FeedListItem showIcon="false" info="Muito Bom!" text="Maria       05/02/2021"/>
                     <FeedListItem showIcon="false" info="Muito Bom o serviço" text="Beatriz       10/03/2021"/>

@@ -1,5 +1,5 @@
 <mvc:View xmlns:uxap="sap.uxap" xmlns:core="sap.ui.core" 
-controllerName="desafio.l4e.app.controller.CadastroUsuario" 
+controllerName="desafio.l4e.app.controller.AvaliacaoServico" 
 xmlns:form="sap.ui.layout.form" 
 xmlns:mvc="sap.ui.core.mvc" 
 displayBlock="true" 
@@ -7,68 +7,64 @@ xmlns="sap.m">
 
     <Page showHeader="false">
         <content  >
-            <VBox width="25%" alignItems="Center"  >
+            <VBox width="25%" alignItems="Center">
                 <Image src="./images/logoName.png" width="100%" height="100%"  />
             </VBox>
-            <form:Form  >
+
+            <form:Form >
                 <form:title>
-                    <core:Title text="Cadastro de usuário" level="H6"></core:Title>
+                    <core:Title text="Avaliação de serviço" level="H5" ></core:Title>
                 </form:title>
-                <form:layout   >
+                <form:layout >
                     <form:ColumnLayout columnsL="2" columnsM="2" columnsXL="2"  ></form:ColumnLayout>
                 </form:layout>
-                
-                <form:formContainers  >
+                <form:formContainers >
                     <form:FormContainer  >
-                        <form:formElements  >
-                            <form:FormElement  >
-                                <form:label>
-                                    <Label text="Nome" design="Bold" > </Label>
-                                </form:label>
-                                <form:fields >
-                                    <Input value="{Usuario>/nome}"></Input>
-                                </form:fields>
-                            </form:FormElement>
+                        <form:formElements >                           
                             <form:FormElement >
                                 <form:label>
-                                    <Label text="Email" design="Bold" > </Label>
-                                </form:label>
-                                <form:fields >
-                                    <Input value="{Usuario>/mail}"></Input>
-                                </form:fields>
-                            </form:FormElement>
-                            <form:FormElement >
-                                <form:label>
-                                    <Label text="Senha" design="Bold" > </Label>
-                                </form:label>
-                                <form:fields >
-                                    <Input value="{Usuario>/senha}" type="Password"></Input>
-                                </form:fields>
-                            </form:FormElement>
-                            <form:FormElement >
-                                <form:label>
-                                    <Label text="Telefone" design="Bold" > </Label>
+                                    <Label text="Nota" design="Bold" > </Label>
                                 </form:label>
                                 <form:fields>
-                                    <Input value="{Usuario>/telefone}" ></Input>
+                                    <Input value="" ></Input>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Comentário" design="Bold"></Label>
+                                </form:label>
+                                <form:fields>
+                                    <TextArea value="" growing="true" width="100%"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement >
+                                <form:label>
+                                    <Label text="Recomendação do serviço" design="Bold" > </Label>
+                                </form:label>
+                                <form:fields>
+                                    <ComboBox showSecondaryValues="true" width="60%" >
+                                        <items>
+                                            <core:Item key="true" text="Recomendo" />
+                                            <core:Item key="false" text="Não recomendo" />
+                                        </items>
+                                    </ComboBox>
                                 </form:fields>
                             </form:FormElement>
                         </form:formElements>
                     </form:FormContainer>
                 </form:formContainers>
-            </form:Form>
-                        
+        </form:Form>
+            
         </content>
         <OverflowToolbar >
             <ToolbarSpacer />
-                <Button text="Cadastrar" type="Emphasized" press="onCadastrar" width="12%" />
+                <Button text="Enviar avaliação" type="Emphasized" press="onConfirmar" width="10%" />
             <ToolbarSpacer />
         </OverflowToolbar>
-
         <content >
             <Image src="./images/logoL4E.png" width="100px" height="100px"  />
         </content>
-
+            
         <footer >
             <OverflowToolbar >
                 
